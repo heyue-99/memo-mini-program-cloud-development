@@ -1,0 +1,90 @@
+
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.text {
+  background: #fff;
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 34rpx;
+}
+
+.title {
+  width: 100%;
+  height: 100rpx;
+  margin-bottom: 20rpx;
+}
+
+.content {
+  width: 100%;
+  height: 400rpx;
+  margin-bottom: 20rpx;
+}
+
+.view-img {
+  position: relative;
+  display: inline-block;
+  width: 220rpx;
+  height: 220rpx;
+  vertical-align: top;
+  margin-right: 20rpx;
+}
+
+.view-img:last-child {
+  margin-right: 0;
+}
+
+.up-img {
+  width: 100%;
+  height: 100%;
+}
+
+.submit-btn {
+  width: 95%;
+  height: 80rpx;
+  background: rgba(255, 81, 0, 0.932);
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  margin-top: 30rpx;
+}
+
+.share-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.share-btn .share {
+  width: 45%;
+}
+
+.close {
+  position: absolute;
+  right: -15rpx;
+  top: -15rpx;
+  width: 40rpx;
+  height: 40rpx;
+  z-index: 50;
+}
+
+.show-view {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 100;
+}
+
+.show-image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}

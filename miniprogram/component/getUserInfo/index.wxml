@@ -1,0 +1,6 @@
+<view class="info-bg">
+  <view class="info-content">
+    <image class="info-image" src="/images/info.png"></image>
+    <button class="info-btn" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"></button>
+  </view>
+</view>

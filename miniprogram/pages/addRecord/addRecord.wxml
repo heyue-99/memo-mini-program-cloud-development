@@ -1,0 +1,11 @@
+
+<input class="text title" placeholder="标题" focus maxlength="20" bindinput="titleInput" disabled="{{inputDisabled}}"></input>
+<view class='text'>
+  <textarea class='content' placeholder="请输入记录内容" bindinput="contentInput" disabled="{{inputDisabled}}"></textarea>
+  <view wx:for="{{imgList}}" wx:for-item="item" wx:key="index" class='view-img'>
+    <image src='{{item}}' class='up-img' mode='scaleToFill'></image>
+    <image src='/images/close.png' class='close' bindtap='deleteImg' data-index="{{index}}"></image>
+  </view>
+  <view class='img-zhanwei' bindtap="addImg" wx:if="{{hasAddphoto}}">添加图片</view>
+</view>
+<button class='submit-btn' bindtap='submitRecord'>保存提交</button>

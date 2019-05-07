@@ -1,0 +1,19 @@
+<input class="text title" placeholder="标题" focus="{{isFocus}}" maxlength="20" bindinput="titleInput" disabled="{{inputDisabled}}" value="{{title}}"></input>
+<view class='text'>
+  <textarea class='content' wx:if="{{!isLargeImg}}" placeholder="请输入记录内容" bindinput="contentInput" disabled="{{inputDisabled}}" value="{{content}}"></textarea>
+  <view wx:for="{{imgList}}" wx:for-item="item" wx:key="index" class='view-img'>
+    <image src='{{item}}' class='up-img' mode='scaleToFill' bindtap='clickImg' data-src="{{item}}"></image>
+    <image src='/images/close.png' class='close' wx:if="{{hasClose}}" bindtap='deleteImg' data-index="{{index}}"></image>
+  </view>
+</view>
+<button class='submit-btn' bindtap='editRecord' wx:if="{{!isEdit}}">编辑内容</button>
+<button class='submit-btn' bindtap='submitRecord' wx:if="{{isEdit}}">保存提交</button>
+<button class='submit-btn' bindtap='deleteRecord'>删除记录</button>
+<view class='share-btn'>
+  <button class='submit-btn share' bindtap='backHome'>回首页</button>
+  <button class='submit-btn share' open-type="share">分享</button>
+</view>
+
+<view class='show-view' wx:if="{{isLargeImg}}" bindtap='closeImg'>
+  <image class='show-image' src="{{largeImg}}" mode="widthFix"></image>
+</view>
